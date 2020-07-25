@@ -97,7 +97,6 @@ describe "Dog" do
       dog = Dog.create(name: "Kevin", breed: "shepard")
 
       dog_from_db = Dog.find_by_id(1)
-
       expect(dog_from_db.id).to eq(1)
     end
   end
@@ -123,7 +122,7 @@ describe "Dog" do
       dog2 = Dog.create(name: 'teddy', breed: 'pug')
 
       new_dog = Dog.find_or_create_by({name: 'teddy', breed: 'irish setter'})
-
+      #binding.pry
       expect(new_dog.id).to eq(3)
     end
   end
